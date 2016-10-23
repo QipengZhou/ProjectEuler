@@ -15,3 +15,15 @@ def sieveErato(n):
         if flag[i]:
             ans.append(i)
     return ans
+
+def triangleNum(n):
+    return n*(n+1)/2
+
+def factorNum(n):
+    res = 0
+    for i in range(1, int(math.sqrt(n))+1):
+        if n % i == 0:
+            res += 2
+    if int(math.sqrt(n)) ** 2 == n:
+        res -= 1
+    return res
